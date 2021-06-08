@@ -1,24 +1,32 @@
-const getUserNumber = +prompt('Введіть ціле число з якого почати рахувати');
-const getUserNumber2 = +prompt('Введіть ціле число до якого рахувати');
-// if (Number.isInteger(getUserNumber || getUserNumber2) == false) {
+let getUserNumber = +prompt('Введіть ціле число з якого почати рахувати');
 
-// }
 
-while (getUserNumber == "" || getUserNumber == isNaN || getUserNumber != Number.isInteger()) {
-    getUserNumber = +prompt('Введіть ціле число з якого почати рахувати');
+while (getUserNumber == "" || isNaN(getUserNumber) || !Number.isInteger(getUserNumber)) {
+    getUserNumber = +prompt('Не вірне перше число, введіть ціле число');
 }
+
+let getUserNumber2 = +prompt('Введіть ціле число до якого рахувати');
+
+
+
+while (getUserNumber2 == "" || isNaN(getUserNumber2) || !Number.isInteger(getUserNumber2)) {
+    getUserNumber2 = +prompt('Не вірне друге число, введіть ціле число');
+}
+
+const min = Math.min(+getUserNumber2, +getUserNumber);
+const max = Math.max(+getUserNumber2, +getUserNumber);
 
 const userChoice = confirm("Пропускати парні?");
 let sum = null;
-let count = getUserNumber;
+// let count = getUserNumber;
 
 
-for (let i = getUserNumber; i <= getUserNumber2; ++i && count++) {
+for (let i = min; i <= max; i++) {
     if (userChoice && i % 2 == 0) {
 
         continue;
     }
-    sum = sum + count;
+    sum += i;
 
 }
 
