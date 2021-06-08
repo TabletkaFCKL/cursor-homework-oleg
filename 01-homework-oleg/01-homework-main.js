@@ -1,4 +1,4 @@
-const getUserNumber = +prompt('Введіть ціле число з якого почати рпхувати');
+const getUserNumber = +prompt('Введіть ціле число з якого почати рахувати');
 const getUserNumber2 = +prompt('Введіть ціле число до якого рахувати');
 if (Number.isInteger(getUserNumber || getUserNumber2) == false) {
     alert('Введіть ціле число!')
