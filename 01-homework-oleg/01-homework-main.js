@@ -1,7 +1,11 @@
 const getUserNumber = +prompt('Введіть ціле число з якого почати рахувати');
 const getUserNumber2 = +prompt('Введіть ціле число до якого рахувати');
-if (Number.isInteger(getUserNumber || getUserNumber2) == false) {
-    alert('Введіть ціле число!')
+// if (Number.isInteger(getUserNumber || getUserNumber2) == false) {
+
+// }
+
+while (getUserNumber == "" || getUserNumber == isNaN || getUserNumber != Number.isInteger()) {
+    getUserNumber = +prompt('Введіть ціле число з якого почати рахувати');
 }
 
 const userChoice = confirm("Пропускати парні?");
@@ -56,3 +60,4 @@ console.log(sum);
 //     return Math.max(arr)
 // }
 // console.log(getMaxDigit(1234));
+
